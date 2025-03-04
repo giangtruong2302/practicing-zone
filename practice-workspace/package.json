@@ -1,0 +1,23 @@
+{
+  "name": "practice-workspace",
+  "version": "1.0.0",
+  "description": "A workspace for practicing algorithms, data structures, system design, and coding challenges.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "algorithms",
+    "data-structures",
+    "system-design",
+    "coding-challenges"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
