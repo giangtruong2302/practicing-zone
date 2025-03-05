@@ -1,0 +1,71 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100px auto 50px;
+  grid-template-areas: "nav header" "nav main" "nav footer";
+  height: 100vh;
+}
+header {
+  grid-area: header;
+  background: linear-gradient(
+      0.5turn,
+      rgba(62, 60, 61, 0.5),
+      rgba(39, 38, 39, 0.5),
+      rgba(70, 68, 70, 0.5)
+    ),
+    url("../../assets/coins.jpg");
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(20px); /* Adjust the blur radius as needed */
+  overflow-y: hidden;
+  color: white;
+}
+nav {
+  grid-area: nav;
+  /* background: linear-gradient(
+      0.5turn,
+      rgba(4, 4, 4, 0.5),
+      rgba(13, 13, 13, 0.5),
+      rgba(8, 8, 8, 0.5)
+    ),
+    url("../../assets/skull.png"); */
+  background-color: rgb(34, 34, 34);
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(20px); /* Adjust the blur radius as needed */
+  overflow-y: hidden;
+  color: white;
+}
+main {
+  grid-area: main;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  /* padding: 16px; */
+}
+footer {
+  grid-area: footer;
+  background-color: lightgreen;
+}
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: "header" "main" "footer";
+  }
+  nav {
+    display: none;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0px;
+    margin: 0px;
+  }
+}
